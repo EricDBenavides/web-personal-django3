@@ -1,0 +1,5 @@
+Descomprime esta carpeta en tu directorio Django:
+
+· En Windows	C:\Django
+· En Mac OS		/Users/tu_usuario/Documents/Django
+· En Linux 		/home/tu_usuario/Django

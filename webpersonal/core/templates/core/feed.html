@@ -1,0 +1,24 @@
+{% extends 'core/layout.html' %}
+{% load humanize %}
+{% block content %}
+
+{% for post in posts %}
+<article>
+    <div class="container-article">
+        <img src="{{ post.user.profile.image.url }}">
+        <div>
+            <h2 class="username"><a href="{% url 'profile' post.user.username %}">@{{ post.user.username }}</a></h2>
+            <i class="clock"></i>
+            <time data-time="#">{{ post.timestamp|naturaltime }}</time>
+            <div class="post">
+                <h3><a href = "{{ post.url }}" >{{ post.content }}</a></h3>  
+                <p>{{ post.description }}</p>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+{% endfor %}
+
+{% endblock %}
