@@ -53,7 +53,7 @@ def register(request):
         form = UserRegisterForm()
     
     data = {'form' : form}
-    return render(request, "registration/register.html", data)
+    return render(request, "social/register.html", data)
 
 @login_required
 def post(request):
